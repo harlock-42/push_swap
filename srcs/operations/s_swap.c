@@ -4,36 +4,31 @@
 ** Exchange the first and the second link of the stack a (pile->a).
 */
 
-static	void		s_swap_a(t_pile *pile)
+static	void	s_swap_a(t_pile *pile)
 {
-	t_list	*tmp;
+	int	tmp_nb;
 
 	if (pile->a == NULL || pile->a->next == NULL)
 		return ;
-	tmp = pile->a;
-	pile->a = pile->a->next;
-	pile->a->prev = NULL;
-	tmp->next = pile->a->next;
-	pile->a->next = tmp;
-	tmp->prev = pile->a;
+	tmp_nb = pile->a->nb;
+	pile->a->nb = pile->a->next->nb;
+	pile->a->next->nb = tmp_nb;
 }
+
 
 /*
 ** Exchange the first and the second link of the stack b (pile->b).
 */
 
-void		s_swap_b(t_pile *pile)
+static	void	s_swap_b(t_pile *pile)
 {
-	t_list	*tmp;
+	int	tmp_nb;
 
 	if (pile->b == NULL || pile->b->next == NULL)
 		return ;
-	tmp = pile->b;
-	pile->b = pile->b->next;
-	pile->b->prev = NULL;
-	tmp->next = pile->b->next;
-	pile->b->next = tmp;
-	tmp->prev = pile->b;
+	tmp_nb = pile->b->nb;
+	pile->b->nb = pile->b->next->nb;
+	pile->b->next->nb = tmp_nb;
 }
 
 /*
@@ -41,7 +36,7 @@ void		s_swap_b(t_pile *pile)
 ** (pile->a ; pile->b).
 */
 
-void	s_swap(t_pile *pile)
+void		s_swap(t_pile *pile)
 {
 	s_swap_a(pile);
 	s_swap_b(pile);

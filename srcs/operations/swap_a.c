@@ -2,14 +2,12 @@
 
 void		swap_a(t_pile *pile)
 {
-	t_list	*tmp;
+	int	tmp_nb;
 
 	if (pile->a == NULL || pile->a->next == NULL)
 		return ;
-	tmp = pile->a;
-	pile->a = pile->a->next;
-	pile->a->prev = NULL;
-	tmp->next = pile->a->next;
-	pile->a->next = tmp;
-	tmp->prev = pile->a;
+	tmp_nb = pile->a->nb;
+	pile->a->nb = pile->a->next->nb;
+	pile->a->next->nb = tmp_nb;
+	ft_printf("SA\n");
 }

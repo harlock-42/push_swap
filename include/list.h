@@ -5,9 +5,9 @@ typedef	struct	s_list
 {
 	int		nb;
 	struct	s_list	*next;
-	struct	s_list	*prev;
 }				t_list;
 
+int		lst_size(t_list *lst);
 t_list		*lst_add_first(int nb, t_list *lst);
 t_list		*lst_add_back(int nb, t_list *lst);
 t_list		*lst_free(t_list *lst);

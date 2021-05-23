@@ -49,6 +49,8 @@ static	void	push_swap(char **arg)
 		return ;
 	}
 	algo(pile);
+	lst_print(pile->a);
+	free_pile(pile);
 }
 
 int		main(int argc, char **argv)

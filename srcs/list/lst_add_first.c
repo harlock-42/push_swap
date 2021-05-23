@@ -10,7 +10,6 @@ t_list	*lst_add_first(int nb, t_list *lst)
 	if (!(new = malloc(sizeof(t_list *))))
 		return (NULL);
 	new->next = NULL;
-	new->prev = NULL;
 	new->nb = nb;
 	return (new);
 }

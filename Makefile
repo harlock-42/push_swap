@@ -28,6 +28,9 @@ SRC		+=	main.c
 	########
 
 SRC		+=	algo.c
+SRC		+=	do_op.c
+SRC		+=	sort_three.c
+SRC		+=	sort_three_case.c
 
 	########
 	# LIST #
@@ -37,11 +40,20 @@ SRC		+=	lst_add_first.c
 SRC		+=	lst_add_back.c
 SRC		+=	lst_free.c
 SRC		+=	lst_print.c
+SRC		+=	lst_size.c
 
 	##############
 	# OPERATIONS #
 	##############
 
+SRC		+=	push_a.c
+SRC		+=	push_b.c
+SRC		+=	r_rotate.c
+SRC		+=	r_reverse_rotate.c
+SRC		+=	reverse_rotate_a.c
+SRC		+=	reverse_rotate_b.c
+SRC		+=	rotate_a.c
+SRC		+=	rotate_b.c
 SRC		+=	s_swap.c
 SRC		+=	swap_a.c
 SRC		+=	swap_b.c
@@ -57,6 +69,7 @@ OBJ_PATH	=	./.obj/
 
 vpath %.c srcs/
 vpath %.c srcs/algo/
+vpath %.c srcs/algo/sort_three/
 vpath %.c srcs/list/
 vpath %.c srcs/operations/
 vpath %.c srcs/utils/
