@@ -12,4 +12,5 @@ int		lst_size(t_list *lst);
 t_list		*lst_add_back(char *str, int nb, t_list *lst);
 t_list		*lst_free(t_list *lst);
 void		lst_print(t_list *lst);
+void		lst_print_op(t_list *lst);
 # endif

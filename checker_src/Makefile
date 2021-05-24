@@ -11,7 +11,7 @@ C_WHITE		=	\e[1;37m
 C_END		=	\e[0m
 
 
-NAME		=	push_swap
+NAME		=	checker
 
 CC		=	clang
 
@@ -31,14 +31,13 @@ SRC		+=	main.c
          ###################
           #################
 
-	########
-	# ALGO #
-	########
+	##############
+	# CHECK_ALGO #
+	##############
 
-SRC		+=	algo.c
+SRC		+=	check_algo.c
 SRC		+=	do_op.c
-SRC		+=	sort_three.c
-SRC		+=	sort_three_case.c
+SRC		+=	get_op.c
 
 	########
 	# LIST #
@@ -47,6 +46,7 @@ SRC		+=	sort_three_case.c
 SRC		+=	lst_add_back.c
 SRC		+=	lst_free.c
 SRC		+=	lst_print.c
+SRC		+=	lst_print_op.c
 SRC		+=	lst_size.c
 
 	##############
@@ -76,8 +76,7 @@ OBJ_PATH	=	./.obj/
 
 vpath %.c srcs/
 vpath %.c srcs/checker/
-vpath %.c srcs/algo/
-vpath %.c srcs/algo/sort_three/
+vpath %.c srcs/check_algo/
 vpath %.c srcs/list/
 vpath %.c srcs/operations/
 vpath %.c srcs/utils/
@@ -88,21 +87,17 @@ LIBFT_NAME		=	libft.a
 
 HEADER_NAME		=	push_swap.h
 
-HEADER_NAME_CHECK	=	checker.h
-
 LIB_PATH		=	./.lib
 
 HEADER_PATH		=	./include
 
-LIBFT_PATH		=	./libft
+LIBFT_PATH		=	./../libft
 
 LIBFT_SRC		=	$(addprefix $(LIBFT_PATH)/, $(LIBFT_NAME))
 
 LIBFT			=	$(addprefix $(LIB_PATH)/, $(LIBFT_NAME))
 
 HEADER			=	$(addprefix $(HEADER_PATH)/, $(HEADER_NAME))
-
-HEADER_CHECK		=	$(addprefix $(HEADER_PATH)/, $(HEADER_NAME_CHECK))
 
 all: $(NAME) $(HEADER) Makefile
 
@@ -126,11 +121,11 @@ $(LIB_PATH):
 	@mkdir $(LIB_PATH)
 
 clean:
-	@$(RM) $(OBJ_PATH) $(CHECKER_PATH)/*.o
+	@$(RM) $(OBJ_PATH)
 	@(cd $(LIBFT_PATH) && $(MAKE) clean)
 
 fclean: clean
-	@$(RM) $(NAME) $(CHECKER_NAME)
+	@$(RM) $(NAME)
 	@$(RM) $(LIB_PATH)
 	@(cd $(LIBFT_PATH) && $(MAKE) fclean)
 

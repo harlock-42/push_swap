@@ -39,7 +39,9 @@ static	t_list	*get_pile_a(char **arg)
 static	void	push_swap(char **arg)
 {
 	t_pile	*pile;
+	int	check;
 
+	check = 0;
 	if (!(pile = malloc(sizeof(t_pile))))
 		return ;
 	if (!(pile->a = get_pile_a(arg)))
@@ -48,8 +50,18 @@ static	void	push_swap(char **arg)
 		ft_printf("%sError%s\n", RED, NC);
 		return ;
 	}
-	algo(pile);
+	if (!(pile->op = get_op(&check)) && check == 1)
+	{
+		free_pile(pile);
+		ft_printf("%sError%s\n", RED, NC);
+		return ;
+	}
+	if (check_algo(pile) == YES)
+		ft_printf("%sOK\n%s", GREEN, NC);
+	else
+		ft_printf("%sError\n%s", RED, NC);
 	lst_print(pile->a);
+	lst_print(pile->b);
 	free_pile(pile);
 }
 
