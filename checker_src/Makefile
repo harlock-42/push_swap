@@ -104,6 +104,7 @@ all: $(NAME) $(HEADER) Makefile
 $(NAME): $(LIB_PATH) $(LIBFT_SRC) $(LIBFT) $(OBJ_PATH) $(OBJ)
 	   @$(CC) -I$(HEADER_PATH)/ -o $(NAME) $(OBJ) $(LIBFT)
 	@echo "$<		[$(C_GREEN)OK$(C_END)]"
+	@($(CP) $(NAME) ..)
 
 $(OBJ): $(OBJ_PATH)%.o: %.c $(HEADER) Makefile
 	@$(CC) -I$(HEADER_PATH)/ $(CFLAGS) $< -o $@
@@ -128,5 +129,6 @@ fclean: clean
 	@$(RM) $(NAME)
 	@$(RM) $(LIB_PATH)
 	@(cd $(LIBFT_PATH) && $(MAKE) fclean)
+	@(cd .. && $(RM) $(NAME))
 
 re: fclean all

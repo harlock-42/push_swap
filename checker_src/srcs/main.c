@@ -60,8 +60,6 @@ static	void	push_swap(char **arg)
 		ft_printf("%sOK\n%s", GREEN, NC);
 	else
 		ft_printf("%sError\n%s", RED, NC);
-	lst_print(pile->a);
-	lst_print(pile->b);
 	free_pile(pile);
 }
 

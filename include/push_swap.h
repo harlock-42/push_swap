@@ -23,7 +23,8 @@ void	sort_three_case_2(t_pile *pile);
 void	sort_three_case_3(t_pile *pile);
 void	sort_three_case_4(t_pile *pile);
 void	sort_three_case_5(t_pile *pile);
-int	do_op(int op, t_pile *pile);
+void	sortilege(t_pile *pile);
+int	is_pile_sort(t_list *pile);
 
 /*
 ** OPERATIONS
@@ -45,7 +46,13 @@ void	swap_b(t_pile *pile);
 ** UTILS
 */
 
+int	do_op(int op, t_pile *pile);
+int	find_median(t_list *pile);
+int	find_min(t_pile *pile);
+int	find_max(t_pile *pile);
 int	is_overflow(char *str);
 t_pile	*free_pile(t_pile *pile);
+void	sort_rotate(t_pile *pile);
+void	sort_push_a(t_pile *pile);
 
 #endif

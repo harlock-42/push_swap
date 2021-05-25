@@ -37,8 +37,10 @@ SRC		+=	main.c
 
 SRC		+=	algo.c
 SRC		+=	do_op.c
+SRC		+=	is_pile_sort.c
 SRC		+=	sort_three.c
 SRC		+=	sort_three_case.c
+SRC		+=	sortilege.c
 
 	########
 	# LIST #
@@ -70,7 +72,11 @@ SRC		+=	swap_b.c
 	#########
 
 SRC		+=	is_overflow.c
+SRC		+=	find_median.c
+SRC		+=	find_min_max.c
 SRC		+=	free_pile.c
+SRC		+=	sort_rotate.c
+SRC		+=	sort_push_a.c
 
 OBJ_PATH	=	./.obj/
 
@@ -104,6 +110,8 @@ HEADER			=	$(addprefix $(HEADER_PATH)/, $(HEADER_NAME))
 
 HEADER_CHECK		=	$(addprefix $(HEADER_PATH)/, $(HEADER_NAME_CHECK))
 
+CHECKER_PATH		=	./checker_src
+
 all: $(NAME) $(HEADER) Makefile
 
 $(NAME): $(LIB_PATH) $(LIBFT_SRC) $(LIBFT) $(OBJ_PATH) $(OBJ)
@@ -128,10 +136,16 @@ $(LIB_PATH):
 clean:
 	@$(RM) $(OBJ_PATH) $(CHECKER_PATH)/*.o
 	@(cd $(LIBFT_PATH) && $(MAKE) clean)
+	@(cd $(CHECKER_PATH) && $(MAKE) clean)
 
 fclean: clean
 	@$(RM) $(NAME) $(CHECKER_NAME)
 	@$(RM) $(LIB_PATH)
 	@(cd $(LIBFT_PATH) && $(MAKE) fclean)
+	@(cd $(CHECKER_PATH) && $(MAKE) fclean)
+
+checker:
+	@(cd $(CHECKER_PATH) && $(MAKE))
+	
 
 re: fclean all

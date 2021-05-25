@@ -5,6 +5,11 @@ void		algo(t_pile *pile)
 	int	size;
 
 	size = lst_size(pile->a);
-	if (size == 3)
-		sort_three(pile);
+	while (1)
+	{
+		size = lst_size(pile->a);
+		sortilege(pile);
+	//	if (is_pile_sort(pile->a) == YES)
+			break ;
+	}
 }
