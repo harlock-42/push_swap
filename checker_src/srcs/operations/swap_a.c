@@ -9,5 +9,4 @@ void		swap_a(t_pile *pile)
 	tmp_nb = pile->a->nb;
 	pile->a->nb = pile->a->next->nb;
 	pile->a->next->nb = tmp_nb;
-	ft_printf("SA\n");
 }

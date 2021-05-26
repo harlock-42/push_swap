@@ -2,25 +2,25 @@
 
 static	int	wich_op(char *str)
 {
-	if (ft_strcmp(str, "SA") == 0)
+	if (ft_strcmp(str, "sa") == 0)
 		return (SA);
-	else if (ft_strcmp(str, "SB") == 0)
+	else if (ft_strcmp(str, "sb") == 0)
 		return (SB);
-	else if (ft_strcmp(str, "SS") == 0)
+	else if (ft_strcmp(str, "ss") == 0)
 		return (SS);
-	else if (ft_strcmp(str, "PA") == 0)
+	else if (ft_strcmp(str, "pa") == 0)
 		return (PA);
-	else if (ft_strcmp(str, "PB") == 0)
+	else if (ft_strcmp(str, "pb") == 0)
 		return (PB);
-	else if (ft_strcmp(str, "RA") == 0)
+	else if (ft_strcmp(str, "ra") == 0)
 		return (RA);
-	else if (ft_strcmp(str, "RB") == 0)
+	else if (ft_strcmp(str, "rb") == 0)
 		return (RB);
-	else if (ft_strcmp(str, "RR") == 0)
+	else if (ft_strcmp(str, "rr") == 0)
 		return (RR);
-	else if (ft_strcmp(str, "RRA") == 0)
+	else if (ft_strcmp(str, "rra") == 0)
 		return (RRA);
-	else if (ft_strcmp(str, "RRB") == 0)
+	else if (ft_strcmp(str, "rrb") == 0)
 		return (RRB);
 	else
 		return (RRR);
@@ -58,6 +58,9 @@ static	int	is_pile_sort(t_list *a)
 
 int		check_algo(t_pile *pile)
 {
+	t_list	*op;
+
+	op = NULL;
 	do_algo(pile);
 	if (pile->a == NULL)
 		return (NO);

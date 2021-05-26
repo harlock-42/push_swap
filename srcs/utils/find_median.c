@@ -25,7 +25,7 @@ static	int	is_median(int nb, t_list *pile)
 	return (NO);
 }
 
-int	find_median(t_list *pile)
+int	find_med(t_list *pile)
 {
 	t_list	*tmp;
 	int	median;

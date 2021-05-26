@@ -16,5 +16,4 @@ void	reverse_rotate_a(t_pile *pile)
 	tmp->next = NULL;
 	last->next = pile->a;
 	pile->a = last;
-	ft_printf("RRA\n");
 }

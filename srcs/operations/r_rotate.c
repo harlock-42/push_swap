@@ -37,5 +37,5 @@ void		r_rotate(t_pile *pile)
 {
 	r_rotate_a(pile);
 	r_rotate_b(pile);
-	ft_printf("RR\n");
+	ft_printf("rr\n");
 }

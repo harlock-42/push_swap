@@ -15,5 +15,4 @@ void	rotate_b(t_pile *pile)
 	tmp->next = first;
 	pile->b = first->next;
 	first->next = NULL;
-	ft_printf("RB\n");
 }

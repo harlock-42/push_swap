@@ -29,7 +29,7 @@ void		sort_rotate(t_pile *pile)
 	int	median;
 
 	
-	median = find_median(pile->a);
+	median = find_med(pile->a);
 	if (pile->a->nb > median)
 		sort_ra(pile);
 	else

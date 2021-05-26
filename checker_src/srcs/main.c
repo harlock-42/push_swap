@@ -1,4 +1,4 @@
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 static	int	num_is_okey(char *str)
 {
@@ -36,7 +36,7 @@ static	t_list	*get_pile_a(char **arg)
 	return (a);
 }
 
-static	void	push_swap(char **arg)
+static	void	checker(char **arg)
 {
 	t_pile	*pile;
 	int	check;
@@ -67,7 +67,6 @@ int		main(int argc, char **argv)
 {
 	if (argc <= 1)
 		return (0);
-	else
-		push_swap(argv  + 1);
+	checker(argv  + 1);
 	return (0);
 }

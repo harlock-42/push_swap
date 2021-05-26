@@ -17,6 +17,8 @@ typedef	struct	s_pile
 */
 
 void	algo(t_pile *pile);
+void	sort_five(t_pile *pile);
+void	sort_four(t_pile *pile);
 void	sort_three(t_pile *pile);
 void	sort_three_case_1(t_pile *pile);
 void	sort_three_case_2(t_pile *pile);
@@ -24,6 +26,7 @@ void	sort_three_case_3(t_pile *pile);
 void	sort_three_case_4(t_pile *pile);
 void	sort_three_case_5(t_pile *pile);
 void	sortilege(t_pile *pile);
+void	three_value(t_pile *pile);
 int	is_pile_sort(t_list *pile);
 
 /*
@@ -47,10 +50,12 @@ void	swap_b(t_pile *pile);
 */
 
 int	do_op(int op, t_pile *pile);
-int	find_median(t_list *pile);
-int	find_min(t_pile *pile);
-int	find_max(t_pile *pile);
+int	find_med(t_list *pile);
+int	find_min(t_list *pile);
+int	find_max(t_list *pile);
 int	is_overflow(char *str);
+int	is_sort(t_list *list);
+int	last_nb(t_list *pile);
 t_pile	*free_pile(t_pile *pile);
 void	sort_rotate(t_pile *pile);
 void	sort_push_a(t_pile *pile);

@@ -40,5 +40,4 @@ void		s_swap(t_pile *pile)
 {
 	s_swap_a(pile);
 	s_swap_b(pile);
-	ft_printf("SS\n");
 }

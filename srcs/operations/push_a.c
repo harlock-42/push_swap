@@ -9,5 +9,5 @@ void	push_a(t_pile *pile)
 	pile->a = pile->b;
 	pile->b = pile->b->next;
 	pile->a->next = tmp;
-	ft_printf("PA\n");
+	ft_printf("pa\n");
 }

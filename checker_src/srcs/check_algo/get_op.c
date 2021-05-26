@@ -2,17 +2,17 @@
 
 static	int	is_a_op(char *str)
 {
-	if (ft_strcmp("SA", str) != 0 &&
-	ft_strcmp("SB", str) != 0 &&
-	ft_strcmp("SS", str) != 0 &&
-	ft_strcmp("PA", str) != 0 &&
-	ft_strcmp("PB", str) != 0 &&
-	ft_strcmp("RA", str) != 0 &&
-	ft_strcmp("RB", str) != 0 &&
-	ft_strcmp("RR", str) != 0 &&
-	ft_strcmp("RRA", str) != 0 &&
-	ft_strcmp("RRB", str) != 0 &&
-	ft_strcmp("RRR", str) != 0)
+	if (ft_strcmp("sa", str) != 0 &&
+	ft_strcmp("sb", str) != 0 &&
+	ft_strcmp("ss", str) != 0 &&
+	ft_strcmp("pa", str) != 0 &&
+	ft_strcmp("pb", str) != 0 &&
+	ft_strcmp("ra", str) != 0 &&
+	ft_strcmp("rb", str) != 0 &&
+	ft_strcmp("rr", str) != 0 &&
+	ft_strcmp("rra", str) != 0 &&
+	ft_strcmp("rrb", str) != 0 &&
+	ft_strcmp("rrr", str) != 0)
 		return (NO);
 	return (YES);
 }
