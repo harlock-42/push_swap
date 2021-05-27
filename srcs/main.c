@@ -48,6 +48,7 @@ static	void	push_swap(char **arg)
 		ft_printf("%sError%s\n", RED, NC);
 		return ;
 	}
+	get_index(pile);
 	algo(pile);
 //	lst_print(pile->a);
 	free_pile(pile);

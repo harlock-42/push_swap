@@ -21,6 +21,9 @@ void		algo(t_pile *pile)
 		sort_four(pile);
 	else if (size == 5)
 		sort_five(pile);
+	else
+		sortilege(pile);
 //	lst_print(pile->a);
+//	lst_print(pile->b);
 //	sortilege(pile);
 }

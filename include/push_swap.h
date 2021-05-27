@@ -46,6 +46,12 @@ void	swap_a(t_pile *pile);
 void	swap_b(t_pile *pile);
 
 /*
+** GET_INDEX
+*/
+
+void	get_index(t_pile *pile);
+
+/*
 ** UTILS
 */
 
@@ -53,8 +59,10 @@ int	do_op(int op, t_pile *pile);
 int	find_med(t_list *pile);
 int	find_min(t_list *pile);
 int	find_max(t_list *pile);
+int	find_max_index(t_list *pile);
 int	is_overflow(char *str);
 int	is_sort(t_list *list);
+int	is_sort_rev(t_list *list);
 int	last_nb(t_list *pile);
 t_pile	*free_pile(t_pile *pile);
 void	sort_rotate(t_pile *pile);

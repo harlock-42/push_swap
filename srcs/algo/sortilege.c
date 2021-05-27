@@ -1,47 +1,46 @@
 #include "push_swap.h"
 
-static	void	push_pile_b(t_pile *pile)
+static	void	sort_a_bit(t_pile *pile, int pos_bit)
 {
-	int	min;
-	int	max;
-	int	med;
-	int	count;
+	int	size;
 
-	med = find_med(pile->a);
-	min = find_min(pile->a);
-	max = find_max(pile->a);
-	count = 0;
-	t_list	*tmp;
-
-	while (pile->a)
+	size = lst_size(pile->a);
+	while (size)
 	{
-		if (pile->a->nb != min )
-//		pile->a->nb != med &&
-//		pile->a->nb != max)
-		{
-			do_op(PB, pile);
-		}
+		if (((pile->a->index >> pos_bit) & 1) == 1)
+			do_op(RA, pile);
 		else
-		{
-			if (count == 0)
-				tmp = pile->a;
-			++count;
-			pile->a = pile->a->next;
-		}
+			do_op(PB, pile);
+		--size;
 	}
-	pile->a = tmp;
-}	
+	while (pile->b)
+		do_op(PA, pile);
+}
+
+static	int	find_max_bit(int max)
+{
+	int	max_bit;
+
+	max_bit = 0;
+	while ((max >> max_bit) != 0)
+		++max_bit;
+	return (max_bit);
+}
 
 void		sortilege(t_pile *pile)
 {
-	int	min;
 	int	max;
-	int	med;
+	int	max_bit;
+	int	pos_bit;
 
-	med = find_med(pile->a);
-	min = find_min(pile->a);
-	max = find_max(pile->a);
-	push_pile_b(pile);
-	lst_print(pile->a);
-	lst_print(pile->b);
+	max = find_max_index(pile->a);
+	max_bit = find_max_bit(max);
+	pos_bit = 0;
+	while (pos_bit < max_bit)
+	{
+		sort_a_bit(pile, pos_bit);
+		++pos_bit;
+	}
+		
+//	lst_print(pile->a);
 }

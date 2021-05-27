@@ -45,6 +45,12 @@ SRC		+=	sort_three.c
 SRC		+=	sort_three_case.c
 SRC		+=	sortilege.c
 
+	#############
+	# GET_INDEX #
+	#############
+
+SRC		+=	get_index.c
+
 	########
 	# LIST #
 	########
@@ -52,6 +58,7 @@ SRC		+=	sortilege.c
 SRC		+=	lst_add_back.c
 SRC		+=	lst_free.c
 SRC		+=	lst_print.c
+SRC		+=	lst_print_binary.c
 SRC		+=	lst_size.c
 
 	##############
@@ -77,8 +84,10 @@ SRC		+=	swap_b.c
 SRC		+=	is_overflow.c
 SRC		+=	find_median.c
 SRC		+=	find_min_max.c
+SRC		+=	find_max_index.c
 SRC		+=	free_pile.c
 SRC		+=	is_sort.c
+SRC		+=	is_sort_rev.c
 SRC		+=	last_nb.c
 SRC		+=	sort_rotate.c
 SRC		+=	sort_push_a.c
@@ -86,10 +95,11 @@ SRC		+=	sort_push_a.c
 OBJ_PATH	=	./.obj/
 
 vpath %.c srcs/
-vpath %.c srcs/checker/
+vpath %.c srcs/get_index/
 vpath %.c srcs/algo/
 vpath %.c srcs/algo/sort_five/
 vpath %.c srcs/algo/sort_three/
+vpath %.c srcs/algo/sortilege/
 vpath %.c srcs/list/
 vpath %.c srcs/operations/
 vpath %.c srcs/utils/
