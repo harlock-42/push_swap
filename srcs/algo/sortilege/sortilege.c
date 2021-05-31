@@ -39,7 +39,7 @@ static	int	find_max_bit(int max)
 	return (max_bit);
 }
 
-void		sortilege(t_pile *pile)
+void	sortilege(t_pile *pile)
 {
 	int	max;
 	int	max_bit;
@@ -53,6 +53,5 @@ void		sortilege(t_pile *pile)
 		sort_a_bit(pile, pos_bit);
 		++pos_bit;
 	}
-		
-//	lst_print(pile->a);
+	lst_print(pile->a);
 }

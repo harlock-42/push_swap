@@ -43,7 +43,7 @@ static	void	rotate(t_pile *pile, int nb)
 ** sort list of five.
 */
 
-void		sort_five(t_pile *pile)
+void	sort_five(t_pile *pile)
 {
 	if (is_sort(pile->a) == YES)
 	{

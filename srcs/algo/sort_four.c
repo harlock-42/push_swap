@@ -54,7 +54,7 @@ static	void	do_plus_med(t_pile *pile)
 	do_op(RA, pile);
 }
 
-void		sort_four(t_pile *pile)
+void	sort_four(t_pile *pile)
 {
 	int	min;
 	int	max;

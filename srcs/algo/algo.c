@@ -20,7 +20,7 @@ static	void	do_one_op(t_pile *pile)
 		do_op(SA, pile);
 }
 
-void		algo(t_pile *pile)
+void	algo(t_pile *pile)
 {
 	int	size;
 

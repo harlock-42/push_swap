@@ -39,6 +39,7 @@ void	sort_three_case_4(t_pile *pile);
 void	sort_three_case_5(t_pile *pile);
 void	sortilege(t_pile *pile);
 void	three_value(t_pile *pile);
+int	is_bit_to_sort(t_list *pile, int pos_bit);
 int	is_pile_sort(t_list *pile);
 
 /*

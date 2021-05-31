@@ -68,7 +68,7 @@ static	int	is_pile_sort(t_list *a)
 	return (YES);
 }
 
-int		check_algo(t_pile *pile)
+int	check_algo(t_pile *pile)
 {
 	t_list	*op;
 

@@ -36,11 +36,10 @@ static	void	sort_ra(t_pile *pile)
 ** Use rotation to sort pile->a.
 */
 
-void		sort_rotate(t_pile *pile)
+void	sort_rotate(t_pile *pile)
 {
 	int	median;
 
-	
 	median = find_med(pile->a);
 	if (pile->a->nb > median)
 		sort_ra(pile);

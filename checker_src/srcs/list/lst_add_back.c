@@ -12,6 +12,18 @@
 
 #include "push_swap.h"
 
+static	t_list	*first_link(t_list *list, char *str, int nb)
+{
+	list = (t_list *)malloc(sizeof(t_list));
+	if (!list)
+		return (NULL);
+	list->str = str;
+	list->nb = nb;
+	list->next = NULL;
+	return (list);
+	return (list);
+}
+
 t_list	*lst_add_back(char *str, int nb, t_list *list)
 {
 	t_list	*new;
@@ -19,15 +31,9 @@ t_list	*lst_add_back(char *str, int nb, t_list *list)
 
 	tmp = list;
 	if (list == NULL)
-	{
-		if(!(list = (t_list *)malloc(sizeof(t_list))))
-			return (NULL);
-		list->str = str;
-		list->nb = nb;
-		list->next = NULL;
-		return (list);
-	}
-	if(!(new = (t_list *)malloc(sizeof(t_list))))
+		return (first_link(list, str, nb));
+	new = (t_list *)malloc(sizeof(t_list));
+	if (!new)
 	{
 		if (str != NULL)
 			free(str);

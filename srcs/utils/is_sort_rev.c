@@ -69,7 +69,7 @@ static	int	until_min(t_list *pile, int max, int prev)
 ** The pile can begin by another integer than min.
 */
 
-int		is_sort_rev(t_list *list)
+int	is_sort_rev(t_list *list)
 {
 	t_list	*tmp;
 	t_list	*pile;

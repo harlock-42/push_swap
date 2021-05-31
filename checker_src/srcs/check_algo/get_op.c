@@ -29,7 +29,7 @@ static	int	is_a_op(char *str)
 	return (YES);
 }
 
-t_list		*get_op(int *check)
+t_list	*get_op(int *check)
 {
 	char	*line;
 	t_list	*op;
@@ -43,7 +43,8 @@ t_list		*get_op(int *check)
 			free(line);
 			return (op);
 		}
-		if (!(op = lst_add_back(ft_strdup(line), 0, op)))
+		op = lst_add_back(ft_strdup(line), 0, op);
+		if (!op)
 		{
 			*check = 1;
 			return (NULL);

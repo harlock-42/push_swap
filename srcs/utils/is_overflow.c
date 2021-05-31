@@ -62,7 +62,7 @@ static	int	is_num_overflow(char *str)
 ** Says if the integer (str) overflow or underflow or is valid.
 */
 
-int		is_overflow(char *str)
+int	is_overflow(char *str)
 {
 	int	size;
 	int	max;

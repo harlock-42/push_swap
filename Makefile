@@ -56,6 +56,7 @@ SRC		+=	sort_four.c
 SRC		+=	sort_three.c
 SRC		+=	sort_three_case.c
 SRC		+=	sortilege.c
+SRC		+=	sortilege_utils.c
 
 	#############
 	# GET_INDEX #
@@ -140,7 +141,8 @@ HEADER_CHECK		=	$(addprefix $(HEADER_PATH)/, $(HEADER_NAME_CHECK))
 
 CHECKER_PATH		=	./checker_src
 
-all: $(NAME) $(HEADER) checker Makefile
+all: $(NAME) $(HEADER) Makefile
+	@(cd $(CHECKER_PATH) && $(MAKE))
 
 $(NAME): $(LIB_PATH) $(LIBFT_SRC) $(LIBFT) $(OBJ_PATH) $(OBJ)
 	   @$(CC) -I$(HEADER_PATH)/ -o $(NAME) $(OBJ) $(LIBFT)

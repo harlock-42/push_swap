@@ -41,7 +41,8 @@ static	t_list	*get_pile_a(char **arg)
 	{
 		if (num_is_okey(arg[i]) == NO)
 			return (NULL);
-		if (!(a = lst_add_back(NULL, ft_atoi(arg[i]), a)))
+		a = lst_add_back(NULL, ft_atoi(arg[i]), a);
+		if (!a)
 			return (NULL);
 		++i;
 	}
@@ -52,9 +53,11 @@ static	void	push_swap(char **arg)
 {
 	t_pile	*pile;
 
-	if (!(pile = malloc(sizeof(t_pile))))
+	pile = malloc(sizeof(t_pile));
+	if (!pile)
 		return ;
-	if (!(pile->a = get_pile_a(arg)))
+	pile->a = get_pile_a(arg);
+	if (!pile->a)
 	{
 		free_pile(pile);
 		ft_printf("%sError%s\n", RED, NC);
@@ -66,7 +69,7 @@ static	void	push_swap(char **arg)
 	free_pile(pile);
 }
 
-int		main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	if (argc <= 1)
 		return (0);

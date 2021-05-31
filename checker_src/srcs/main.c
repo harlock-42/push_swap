@@ -41,7 +41,8 @@ static	t_list	*get_pile_a(char **arg)
 	{
 		if (num_is_okey(arg[i]) == NO)
 			return (NULL);
-		if (!(a = lst_add_back(NULL, ft_atoi(arg[i]), a)))
+		a = lst_add_back(NULL, ft_atoi(arg[i]), a);
+		if (!a)
 			return (NULL);
 		++i;
 	}
@@ -54,15 +55,18 @@ static	void	checker(char **arg)
 	int	check;
 
 	check = 0;
-	if (!(pile = malloc(sizeof(t_pile))))
+	pile = malloc(sizeof(t_pile));
+	if (!pile)
 		return ;
-	if (!(pile->a = get_pile_a(arg)))
+	pile->a = get_pile_a(arg);
+	if (!pile->a)
 	{
 		free_pile(pile);
 		ft_printf("%sError%s\n", RED, NC);
 		return ;
 	}
-	if (!(pile->op = get_op(&check)) && check == 1)
+	pile->op = get_op(&check);
+	if (!pile->op && check == 1)
 	{
 		free_pile(pile);
 		ft_printf("%sError%s\n", RED, NC);
@@ -75,7 +79,7 @@ static	void	checker(char **arg)
 	free_pile(pile);
 }
 
-int		main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	if (argc <= 1)
 		return (0);
