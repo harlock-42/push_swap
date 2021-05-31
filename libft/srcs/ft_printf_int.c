@@ -12,10 +12,10 @@
 
 #include "../includes/libft.h"
 
-static	int		ft_len(long int n)
+static	int	ft_len(long int n)
 {
 	int			len;
-	long	int	nb;
+	long int	nb;
 
 	len = 0;
 	nb = n;
@@ -29,7 +29,7 @@ static	int		ft_len(long int n)
 	return (len);
 }
 
-static	int		ft_do_precision_int(t_printf *count, long int nb, int len)
+static	int	ft_do_precision_int(t_printf *count, long int nb, int len)
 {
 	int	sign;
 	int	end;
@@ -59,8 +59,8 @@ static	void	ft_cpy_buffer_int(t_printf *count, long int nb)
 	int		sign;
 	char	buff[30];
 
-	if (nb == 0 && (count->is_precision_without_value ||
-	(count->is_precision && count->precision_value == 0)))
+	if (nb == 0 && (count->is_precision_without_value
+			|| (count->is_precision && count->precision_value == 0)))
 		return ;
 	ft_bzero(buff, 30);
 	len = ft_len(nb);
@@ -105,9 +105,9 @@ static	void	ft_do_convert_int(t_printf *count, long int nb, int len)
 	ft_cpy_buffer_int(count, nb);
 }
 
-int				ft_int(t_printf *count, va_list *ap)
+int	ft_int(t_printf *count, va_list *ap)
 {
-	long	int		nb;
+	long int		nb;
 	int				len;
 
 	nb = 0;

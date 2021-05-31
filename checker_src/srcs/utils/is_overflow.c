@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:21:07 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:21:08 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:19:41 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static	int	is_num_overflow(char *str)
 ** Says if the integer (str) overflow or underflow or is valid.
 */
 
-int		is_overflow(char *str)
+int	is_overflow(char *str)
 {
 	int	size;
 	int	max;

@@ -19,7 +19,7 @@
 ** renvoie le nombre de caractere sans compter le '\0'.
 */
 
-static	int		ft_len(int n)
+static	int	ft_len(int n)
 {
 	size_t	len;
 
@@ -34,7 +34,7 @@ static	int		ft_len(int n)
 	return (len);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	size_t	len;
 	size_t	sign;
@@ -44,7 +44,8 @@ char			*ft_itoa(int n)
 	sign = 0;
 	if (n < 0)
 		sign++;
-	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
 		return (NULL);
 	*(str + len) = '\0';
 	while (len)

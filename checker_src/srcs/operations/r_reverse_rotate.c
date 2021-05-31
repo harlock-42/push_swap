@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:19:40 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:19:41 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:16:35 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static	void	r_reverse_rotate_b(t_pile *pile)
 	pile->b = last;
 }
 
-void		r_reverse_rotate(t_pile *pile)
+void	r_reverse_rotate(t_pile *pile)
 {
 	r_reverse_rotate_a(pile);
 	r_reverse_rotate_b(pile);

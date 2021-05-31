@@ -22,8 +22,8 @@ static	void	ft_precision(t_printf *count, char *str)
 		return ;
 	i = 0;
 	j = ft_strlen(count->buffer);
-	if (count->is_precision &&
-	count->precision_value < (int)ft_strlen(str))
+	if (count->is_precision
+		&& count->precision_value < (int)ft_strlen(str))
 		end = count->precision_value;
 	else
 		end = (int)ft_strlen(str);
@@ -39,7 +39,7 @@ static	void	ft_precision(t_printf *count, char *str)
 	count->buffer[j] = '\0';
 }
 
-static	int		ft_minus(t_printf *count, char *str)
+static	int	ft_minus(t_printf *count, char *str)
 {
 	int		len;
 	int		end;
@@ -48,8 +48,9 @@ static	int		ft_minus(t_printf *count, char *str)
 	len = 0;
 	if (count->is_width)
 		end = count->width_value;
-	if ((count->precision_value > (int)ft_strlen(str) ||
-	count->is_precision == 0) && count->is_precision_without_value == 0)
+	if ((count->precision_value > (int)ft_strlen(str)
+			|| count->is_precision == 0)
+		&& count->is_precision_without_value == 0)
 		len = (int)ft_strlen(str);
 	else if (count->is_precision_without_value == 0)
 		len = count->precision_value;
@@ -62,7 +63,7 @@ static	int		ft_minus(t_printf *count, char *str)
 	return (1);
 }
 
-static	int		ft_do_convert_string(t_printf *count, char *str)
+static	int	ft_do_convert_string(t_printf *count, char *str)
 {
 	int		len;
 	int		end;
@@ -71,8 +72,8 @@ static	int		ft_do_convert_string(t_printf *count, char *str)
 	len = 0;
 	if (count->is_minus)
 		return (ft_minus(count, str));
-	if (count->is_precision &&
-	count->precision_value < (int)ft_strlen(str))
+	if (count->is_precision
+		&& count->precision_value < (int)ft_strlen(str))
 		len = count->precision_value;
 	else if (count->is_precision_without_value == 0)
 		len = (int)ft_strlen(str);
@@ -90,12 +91,13 @@ static	int		ft_do_convert_string(t_printf *count, char *str)
 	return (1);
 }
 
-int				ft_string(t_printf *count, va_list *ap)
+int	ft_string(t_printf *count, va_list *ap)
 {
 	char	*string;
 
 	string = NULL;
-	if ((string = va_arg(*ap, char *)) == NULL)
+	string = va_arg(*ap, char *);
+	if (!string)
 		return (ft_do_convert_string(count, "(null)"));
 	if (ft_do_convert_string(count, string) <= 0)
 		return (-1);

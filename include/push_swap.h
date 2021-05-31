@@ -10,15 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DEF_PUSH_SWAP_H
-#define DEF_PUSH_SWAP_H
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-#include "./libft.h"
-#include "./color.h"
-#include "./list.h"
-#include "./operation.h"
+# include "./libft.h"
+# include "./color.h"
+# include "./list.h"
+# include "./operation.h"
 
-typedef	struct	s_pile
+typedef struct s_pile
 {
 	t_list	*a;
 	t_list	*b;
@@ -39,8 +39,8 @@ void	sort_three_case_4(t_pile *pile);
 void	sort_three_case_5(t_pile *pile);
 void	sortilege(t_pile *pile);
 void	three_value(t_pile *pile);
-int	is_bit_to_sort(t_list *pile, int pos_bit);
-int	is_pile_sort(t_list *pile);
+int		is_bit_to_sort(t_list *pile, int pos_bit);
+int		is_pile_sort(t_list *pile);
 
 /*
 ** OPERATIONS
@@ -68,15 +68,15 @@ void	get_index(t_pile *pile);
 ** UTILS
 */
 
-int	do_op(int op, t_pile *pile);
-int	find_med(t_list *pile);
-int	find_min(t_list *pile);
-int	find_max(t_list *pile);
-int	find_max_index(t_list *pile);
-int	is_overflow(char *str);
-int	is_sort(t_list *list);
-int	is_sort_rev(t_list *list);
-int	last_nb(t_list *pile);
+int		do_op(int op, t_pile *pile);
+int		find_med(t_list *pile);
+int		find_min(t_list *pile);
+int		find_max(t_list *pile);
+int		find_max_index(t_list *pile);
+int		is_overflow(char *str);
+int		is_sort(t_list *list);
+int		is_sort_rev(t_list *list);
+int		last_nb(t_list *pile);
 t_pile	*free_pile(t_pile *pile);
 void	sort_rotate(t_pile *pile);
 void	sort_push_a(t_pile *pile);

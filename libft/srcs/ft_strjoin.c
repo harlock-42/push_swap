@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 16:33:18 by tallaire          #+#    #+#             */
-/*   Updated: 2019/12/09 14:24:51 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 14:42:42 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned	int	lens1;
-	unsigned	int	lens2;
+	unsigned int	lens1;
+	unsigned int	lens2;
 	int				i;
 	char			*join;
 
@@ -28,7 +28,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		lens1++;
 	while (*(s2 + lens2))
 		lens2++;
-	if (!(join = (char*)malloc((lens1 + lens2) + 1)))
+	join = (char *)malloc((lens1 + lens2) + 1);
+	if (!join)
 		return (NULL);
 	while (*(s1 + ++i))
 		*(join + i) = *(s1 + i);

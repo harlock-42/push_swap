@@ -12,7 +12,7 @@
 
 #include "../includes/libft.h"
 
-void		ft_init_buffer(t_printf *count, size_t *j)
+void	ft_init_buffer(t_printf *count, size_t *j)
 {
 	write(1, count->buffer, ft_strlen(count->buffer));
 	ft_bzero(count->buffer, 1024);
@@ -20,7 +20,7 @@ void		ft_init_buffer(t_printf *count, size_t *j)
 	return ;
 }
 
-void		ft_cpy_buffer(t_printf *count, char *str)
+void	ft_cpy_buffer(t_printf *count, char *str)
 {
 	int		i;
 	size_t	j;

@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DEF_OPERATION_H
-# define DEF_OPERATION_H
+#ifndef OPERATION_H
+# define OPERATION_H
 
 enum		e_op
 {
@@ -28,4 +28,4 @@ enum		e_op
 	RRR
 };
 
-# endif
+#endif

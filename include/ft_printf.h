@@ -6,12 +6,12 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 14:06:54 by tallaire          #+#    #+#             */
-/*   Updated: 2020/04/20 14:11:23 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 12:47:17 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DEF_FT_PRINTF_H
-# define DEF_FT_PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 # define INDEX_FLAG "diuxXcsp%"
 # define INDEX_NUM "diuxXp"
 # define INDEX_NUM_NO_BASE "di"
@@ -23,7 +23,7 @@
 # include <stdio.h>
 # include "libft.h"
 
-typedef	struct	s_printf
+typedef struct s_printf
 {
 	char		buffer[1024];
 	char		convert[128];
@@ -62,7 +62,7 @@ void			ft_flag_x_to_maj(t_printf *count, char *str);
 void			ft_init_buffer(t_printf *count, size_t *j);
 int				ft_do_width_int(t_printf *count, long int nb, int len);
 void			ft_do_width_ptr(t_printf *count,
-unsigned long long int nb, int len);
+					unsigned long long int nb, int len);
 void			ft_do_width_int_base(t_printf *count, int len);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:29:17 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:29:43 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:42:01 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** Use RRA operation to sort pile->a.
 */
 
-static	void	sort_rra(t_pile *pile)
+static void	sort_rra(t_pile *pile)
 {
 	while (is_pile_sort(pile->a) == NO)
 		do_op(RRA, pile);
@@ -26,7 +26,7 @@ static	void	sort_rra(t_pile *pile)
 ** Use RA operation to sort pile->a.
 */
 
-static	void	sort_ra(t_pile *pile)
+static void	sort_ra(t_pile *pile)
 {
 	while (is_pile_sort(pile->a) == NO)
 		do_op(RA, pile);

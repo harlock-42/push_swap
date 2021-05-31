@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:22:21 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:22:22 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:26:55 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static	int	num_is_okey(char *str)
 static	t_list	*get_pile_a(char **arg)
 {
 	t_list	*a;
-	int	i;
+	int		i;
 
 	a = NULL;
 	i = 0;
@@ -65,7 +65,6 @@ static	void	push_swap(char **arg)
 	}
 	get_index(pile);
 	algo(pile);
-//	lst_print(pile->a);
 	free_pile(pile);
 }
 
@@ -74,6 +73,6 @@ int	main(int argc, char **argv)
 	if (argc <= 1)
 		return (0);
 	else
-		push_swap(argv  + 1);
+		push_swap(argv + 1);
 	return (0);
 }

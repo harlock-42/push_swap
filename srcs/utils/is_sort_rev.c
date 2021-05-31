@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:28:12 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:28:13 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:29:34 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,9 +73,9 @@ int	is_sort_rev(t_list *list)
 {
 	t_list	*tmp;
 	t_list	*pile;
-	int	min;
-	int	max;
-	int	prev;
+	int		min;
+	int		max;
+	int		prev;
 
 	prev = 0;
 	tmp = list;

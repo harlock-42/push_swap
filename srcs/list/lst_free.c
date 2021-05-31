@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:24:51 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:24:52 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:37:48 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 t_list	*lst_free(t_list *list)
 {
 	t_list	*tmp;
+
 	while (list)
 	{
 		tmp = list;

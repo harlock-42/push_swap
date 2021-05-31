@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:17:16 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:17:21 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:25:01 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static	int	num_is_okey(char *str)
 static	t_list	*get_pile_a(char **arg)
 {
 	t_list	*a;
-	int	i;
+	int		i;
 
 	a = NULL;
 	i = 0;
@@ -52,7 +52,7 @@ static	t_list	*get_pile_a(char **arg)
 static	void	checker(char **arg)
 {
 	t_pile	*pile;
-	int	check;
+	int		check;
 
 	check = 0;
 	pile = malloc(sizeof(t_pile));
@@ -62,8 +62,7 @@ static	void	checker(char **arg)
 	if (!pile->a)
 	{
 		free_pile(pile);
-		ft_printf("%sError%s\n", RED, NC);
-		return ;
+		return (ft_printf("%sError%s\n", RED, NC));
 	}
 	pile->op = get_op(&check);
 	if (!pile->op && check == 1)
@@ -83,6 +82,6 @@ int	main(int argc, char **argv)
 {
 	if (argc <= 1)
 		return (0);
-	checker(argv  + 1);
+	checker(argv + 1);
 	return (0);
 }

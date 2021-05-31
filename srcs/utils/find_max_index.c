@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:27:20 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:29:32 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:27:28 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 int	find_max_index(t_list *pile)
 {
 	t_list	*tmp;
-	int	max;
+	int		max;
 
 	tmp = pile;
 	max = pile->index;

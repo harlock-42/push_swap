@@ -17,8 +17,8 @@ static	int	ft_check_convert_attribut(t_printf *count, char *str)
 	int		i;
 
 	i = 0;
-	while (str && str[i] && str[i] != '.' && (str[i] <= '0' || str[i] > '9') &&
-	str[i] != '*')
+	while (str && str[i] && str[i] != '.' && (str[i] <= '0' || str[i] > '9')
+		 && str[i] != '*')
 	{
 		if (str[i] == '#')
 			count->is_diese = 1;
@@ -42,8 +42,8 @@ static	int	ft_check_convert_width(t_printf *count, char *str)
 	int		i;
 
 	i = 0;
-	while (str && str[i] && str[i] != '.' && (str[i] <= '0' || str[i] > '9') &&
-	str[i] != '*')
+	while (str && str[i] && str[i] != '.' && (str[i] <= '0' || str[i] > '9')
+		&& str[i] != '*')
 		++i;
 	if (str[i] == '*' || (str[i] > '0' && str[i] <= '9'))
 		count->is_width = 1;
@@ -86,7 +86,7 @@ static	int	ft_check_convert_precision(t_printf *count, char *str)
 	return (1);
 }
 
-int			ft_check_convert(t_printf *count, char *str)
+int	ft_check_convert(t_printf *count, char *str)
 {
 	count->is_diese = 0;
 	count->is_plus = 0;

@@ -12,12 +12,13 @@
 
 #include "./../includes/libft.h"
 
-int				ft_char(t_printf *count, va_list *ap)
+int	ft_char(t_printf *count, va_list *ap)
 {
 	char	c;
 
 	count->flag_is_c_0 = 0;
-	if ((c = (char)va_arg(*ap, int)) == '\0')
+	c = (char)va_arg(*ap, int);
+	if (c == '\0')
 		count->flag_is_c_0 = 1;
 	ft_write_buffer_c(count, c);
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:28:04 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:28:05 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:30:11 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,13 +69,13 @@ static	int	until_max(t_list *pile, int min, int prev)
 ** The pile can begin by another integer than min.
 */
 
-int		is_sort(t_list *list)
+int	is_sort(t_list *list)
 {
 	t_list	*tmp;
 	t_list	*pile;
-	int	min;
-	int	max;
-	int	prev;
+	int		min;
+	int		max;
+	int		prev;
 
 	prev = 0;
 	tmp = list;

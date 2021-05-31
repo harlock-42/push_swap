@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:28:18 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:28:19 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:30:22 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	last_nb(t_list *pile)
 {
 	t_list	*tmp;
-	int	nb;
+	int		nb;
 
 	tmp = pile;
 	while (pile->next)

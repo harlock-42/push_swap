@@ -12,7 +12,7 @@
 
 #include "../includes/libft.h"
 
-static	size_t		ft_len(int n, int base)
+static	size_t	ft_len(int n, int base)
 {
 	size_t	len;
 
@@ -27,7 +27,7 @@ static	size_t		ft_len(int n, int base)
 	return (len);
 }
 
-static	char		*ft_strcpy_stat(char *dst, char const *src)
+static	char	*ft_strcpy_stat(char *dst, char const *src)
 {
 	int	i;
 
@@ -41,7 +41,14 @@ static	char		*ft_strcpy_stat(char *dst, char const *src)
 	return (dst);
 }
 
-char			*ft_itoa_base(int n, int base)
+/*
+** before it was :
+** while (len)
+** {
+**    len--
+*/
+
+char	*ft_itoa_base(int n, int base)
 {
 	size_t	len;
 	size_t	sign;
@@ -53,12 +60,12 @@ char			*ft_itoa_base(int n, int base)
 	ft_strcpy_stat(index, "0123456789abcdef");
 	if (n < 0)
 		++sign;
-	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
 		return (NULL);
 	str[len] = '\0';
-	while (len)
+	while (len--)
 	{
-		len--;
 		if (n < 0)
 			str[len] = index[((n % base) * (-1))];
 		else
@@ -69,4 +76,3 @@ char			*ft_itoa_base(int n, int base)
 		str[len] = '-';
 	return (str);
 }
-

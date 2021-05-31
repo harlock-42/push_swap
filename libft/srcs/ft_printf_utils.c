@@ -12,7 +12,7 @@
 
 #include "../includes/libft.h"
 
-void			ft_flag_x_to_maj(t_printf *count, char *str)
+void	ft_flag_x_to_maj(t_printf *count, char *str)
 {
 	int	i;
 
@@ -27,7 +27,7 @@ void			ft_flag_x_to_maj(t_printf *count, char *str)
 	}
 }
 
-void			ft_strcat_c(t_printf *count, char const c)
+void	ft_strcat_c(t_printf *count, char const c)
 {
 	int		i;
 
@@ -48,7 +48,7 @@ void			ft_strcat_c(t_printf *count, char const c)
 	++count->return_value;
 }
 
-void			ft_strcat_struct(t_printf *count, char *str)
+void	ft_strcat_struct(t_printf *count, char *str)
 {
 	int		i;
 	int		j;
@@ -81,7 +81,7 @@ static	void	ft_write_space(t_printf *count, char c)
 	}
 }
 
-void			ft_write_buffer_c(t_printf *count, char c)
+void	ft_write_buffer_c(t_printf *count, char c)
 {
 	char	space;
 

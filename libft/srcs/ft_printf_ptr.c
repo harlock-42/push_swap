@@ -12,10 +12,10 @@
 
 #include "../includes/libft.h"
 
-static	int		ft_len(unsigned long long int n)
+static	int	ft_len(unsigned long long int n)
 {
-	int								len;
-	unsigned	long	long	int	nb;
+	int						len;
+	unsigned long long int	nb;
 
 	len = 0;
 	nb = n;
@@ -48,8 +48,8 @@ static	void	ft_cpy_buffer_ptr(t_printf *count, unsigned long long int nb)
 	char	buff[13];
 	char	base[17];
 
-	if (nb == 0 && count->is_width == 0 &&
-	(count->is_precision || count->is_precision_without_value))
+	if (nb == 0 && count->is_width == 0
+		&& (count->is_precision || count->is_precision_without_value))
 		return ;
 	ft_bzero(buff, 13);
 	ft_bzero(base, 17);
@@ -68,15 +68,15 @@ static	void	ft_cpy_buffer_ptr(t_printf *count, unsigned long long int nb)
 }
 
 static	void	ft_do_convert_ptr(t_printf *count,
-unsigned long long int nb, int len)
+	unsigned long long int nb, int len)
 {
 	if (count->is_minus)
 	{
 		ft_cpy_buffer(count, "0x");
 		if (count->is_precision && count->precision_value != 0)
 			count->precision_value += 2;
-		if ((count->is_precision && count->precision_value != 0) &&
-		(count->is_precision == 0 || count->precision_value != 0))
+		if ((count->is_precision && count->precision_value != 0)
+			&& (count->is_precision == 0 || count->precision_value != 0))
 			ft_do_precision_ptr(count, len);
 		if (count->is_precision_without_value == 0 || nb != 0)
 			ft_cpy_buffer_ptr(count, nb);
@@ -95,10 +95,10 @@ unsigned long long int nb, int len)
 		ft_cpy_buffer_ptr(count, nb);
 }
 
-int				ft_ptr(t_printf *count, va_list *ap)
+int	ft_ptr(t_printf *count, va_list *ap)
 {
-	unsigned	long	long	int	nb;
-	int								len;
+	unsigned long long int	nb;
+	int						len;
 
 	nb = 0;
 	len = 0;

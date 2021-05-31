@@ -12,11 +12,11 @@
 
 #include "../includes/libft.h"
 
-static	int		ft_len(t_printf *count, unsigned long int n)
+static	int	ft_len(t_printf *count, unsigned long int n)
 {
-	unsigned	long	int	nb;
-	int						len;
-	unsigned	long	int	base;
+	unsigned long int	nb;
+	int					len;
+	unsigned long int	base;
 
 	nb = n;
 	len = 0;
@@ -26,8 +26,8 @@ static	int		ft_len(t_printf *count, unsigned long int n)
 		base = 16;
 	else
 		return (-1);
-	if (nb == 0 && count->is_precision_without_value == 0 &&
-	(!(count->is_precision && count->precision_value == 0)))
+	if (nb == 0 && count->is_precision_without_value == 0
+		&& (!(count->is_precision && count->precision_value == 0)))
 		return (1);
 	while (nb)
 	{
@@ -54,7 +54,7 @@ static	void	ft_do_precision_int_base(t_printf *count, int len)
 static	void	ft_cpy_buffer_int_base(t_printf *count,
 unsigned long int nb, int len)
 {
-	unsigned	long	int	base;
+	unsigned long int		base;
 	char					buff[30];
 	char					base_hexa[17];
 
@@ -87,8 +87,8 @@ unsigned long int nb, int len)
 	{
 		if (count->is_precision)
 			ft_do_precision_int_base(count, len);
-		if (!(nb == 0 && (count->is_precision_without_value ||
-		(count->is_precision && count->precision_value == 0))))
+		if (!(nb == 0 && (count->is_precision_without_value
+					|| (count->is_precision && count->precision_value == 0))))
 			ft_cpy_buffer_int_base(count, nb, len);
 		if (count->is_width)
 			ft_do_width_int_base(count, len);
@@ -98,20 +98,21 @@ unsigned long int nb, int len)
 		ft_do_width_int_base(count, len);
 	if (count->is_precision)
 		ft_do_precision_int_base(count, len);
-	if (!(nb == 0 && (count->is_precision_without_value ||
-	(count->is_precision && count->precision_value == 0))))
+	if (!(nb == 0 && (count->is_precision_without_value
+				|| (count->is_precision && count->precision_value == 0))))
 		ft_cpy_buffer_int_base(count, nb, len);
 }
 
-int				ft_int_base(t_printf *count, va_list *ap)
+int	ft_int_base(t_printf *count, va_list *ap)
 {
-	unsigned	long	int	nb;
+	unsigned long int		nb;
 	int						len;
 
 	nb = 0;
 	len = 0;
 	nb = (unsigned long int)va_arg(*ap, unsigned int);
-	if ((len = ft_len(count, nb)) < 0)
+	len = ft_len(count, nb);
+	if (len < 0)
 		return (-1);
 	ft_do_convert_int_base(count, nb, len);
 	return (0);

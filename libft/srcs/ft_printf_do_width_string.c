@@ -54,16 +54,17 @@ static	void	ft_minus_is_no(t_printf *count, char *str, char *new)
 	new[i] = '\0';
 }
 
-char			*ft_do_width_string(t_printf *count, char *str)
+char	*ft_do_width_string(t_printf *count, char *str)
 {
 	int		len;
 	char	*new;
 
 	new = NULL;
-	if ((len = (int)ft_strlen((const char *)str) >= count->width_value))
+	len = (int)ft_strlen((const char *)str) >= count->width_value);
+	if (len >= count->width_value)
 		return (str);
-	if (!(new = malloc(sizeof(char) *
-	(unsigned long int)count->width_value)))
+	new = malloc(sizeof(char) * (unsigned long int)count->width_value);
+	if (!new)
 		return (NULL);
 	if (count->is_minus)
 		ft_minus_is_yes(count, str, new);

@@ -6,13 +6,13 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:20:46 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:20:47 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:18:53 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void		swap_b(t_pile *pile)
+void	swap_b(t_pile *pile)
 {
 	int	tmp_nb;
 

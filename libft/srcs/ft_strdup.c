@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 14:00:03 by tallaire          #+#    #+#             */
-/*   Updated: 2019/12/04 17:03:55 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:42:42 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strdup(const char *s1)
 	i = 0;
 	while (*(s1 + i))
 		i++;
-	if (!(dup = (char*)malloc(i + 1)))
+	dup = (char *)malloc(i + 1);
+	if (!dup)
 		return (NULL);
 	i = 0;
 	while (*(s1 + i))

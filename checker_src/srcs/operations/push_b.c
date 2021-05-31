@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:19:34 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:19:35 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:16:16 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	push_b(t_pile *pile)
 {
 	t_list	*tmp;
+
 	if (pile->a == NULL)
 		return ;
 	tmp = pile->b;

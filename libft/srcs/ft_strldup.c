@@ -12,7 +12,8 @@ char	*ft_strldup(char *str, size_t size)
 
 	dup = NULL;
 	i = 0;
-	if (!(dup = malloc(size + 1)))
+	dup = malloc(size + 1);
+	if (!dup)
 		return (NULL);
 	while (i < size)
 	{

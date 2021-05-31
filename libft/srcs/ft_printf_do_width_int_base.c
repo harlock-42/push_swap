@@ -25,7 +25,7 @@ static	int	ft_end(t_printf *count, int len)
 	return (end);
 }
 
-void		ft_do_width_int_base(t_printf *count, int len)
+void	ft_do_width_int_base(t_printf *count, int len)
 {
 	int	end;
 
@@ -34,8 +34,8 @@ void		ft_do_width_int_base(t_printf *count, int len)
 		count->is_zero = 0;
 	while (end > 0)
 	{
-		if (count->is_zero && count->is_precision == 0 &&
-		count->is_precision_without_value == 0)
+		if (count->is_zero && count->is_precision == 0
+			&& count->is_precision_without_value == 0)
 			ft_cpy_buffer(count, "0");
 		else
 			ft_cpy_buffer(count, " ");

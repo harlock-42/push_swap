@@ -6,7 +6,7 @@
 #    By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/03 14:39:06 by tallaire          #+#    #+#              #
-#    Updated: 2019/12/23 11:10:56 by tallaire         ###   ########.fr        #
+#    Updated: 2021/05/31 15:52:39 by tallaire         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,6 @@ SRC_NAME	+=	ft_toupper.c
 #################################
 
 SRC_NAME	+=	get_next_line.c
-SRC_NAME	+=	get_next_line_utils.c
 
 #################################
 ########### FT_PRINTF ###########

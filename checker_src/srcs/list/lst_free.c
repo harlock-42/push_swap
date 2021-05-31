@@ -3,6 +3,7 @@
 t_list	*lst_free(t_list *list)
 {
 	t_list	*tmp;
+
 	while (list)
 	{
 		tmp = list;

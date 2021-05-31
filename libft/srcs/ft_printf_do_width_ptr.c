@@ -22,19 +22,19 @@ static	int	ft_end(t_printf *count, unsigned long long int nb, int len)
 	if (count->is_precision)
 		if (count->precision_value >= len)
 			len = count->precision_value;
-	if (nb == 0 && (count->is_precision_without_value ||
-	(count->is_precision && count->precision_value == 0)))
+	if (nb == 0 && (count->is_precision_without_value
+			|| (count->is_precision && count->precision_value == 0)))
 		len = 2;
 	if (count->width_value > len)
 		end = count->width_value - len;
-	if (nb == 0 && (count->is_precision_without_value ||
-	(count->is_precision && count->precision_value == 0)))
+	if (nb == 0 && (count->is_precision_without_value
+			|| (count->is_precision && count->precision_value == 0)))
 		len = 2;
 	return (end);
 }
 
-void		ft_do_width_ptr(t_printf *count,
-unsigned long long int nb, int len)
+void	ft_do_width_ptr(t_printf *count,
+	unsigned long long int nb, int len)
 {
 	int	end;
 

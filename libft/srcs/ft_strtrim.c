@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 17:49:36 by tallaire          #+#    #+#             */
-/*   Updated: 2019/12/09 14:17:34 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 14:50:24 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 ** non.
 */
 
-size_t		ft_is_set(const char c, const char *set)
+size_t	ft_is_set(const char c, const char *set)
 {
 	while (*set)
 	{
@@ -45,7 +45,7 @@ size_t		ft_is_set(const char c, const char *set)
 ** sinon renvoie (NULL).
 */
 
-char		*ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
 	size_t	len;
 	size_t	i;
@@ -59,7 +59,8 @@ char		*ft_strtrim(const char *s1, const char *set)
 	len = ft_strlen(s1);
 	while (len && ft_is_set(*(s1 + (--len)), set))
 		;
-	if (!(str = (char *)malloc(sizeof(char) * (len + 2))))
+	str = (char *)malloc(sizeof(char) * (len + 2));
+	if (!str)
 		return (NULL);
 	while (i <= len)
 	{

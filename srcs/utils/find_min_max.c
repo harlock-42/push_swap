@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:27:35 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:27:36 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:28:53 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 int	find_min(t_list *pile)
 {
 	t_list	*tmp;
-	int	min;
+	int		min;
 
 	tmp = pile;
 	min = pile->nb;
@@ -40,7 +40,7 @@ int	find_min(t_list *pile)
 int	find_max(t_list *pile)
 {
 	t_list	*tmp;
-	int	max;
+	int		max;
 
 	tmp = pile;
 	max = pile->nb;

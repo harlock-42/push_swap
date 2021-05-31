@@ -33,7 +33,7 @@ static	int	ft_convert(va_list *ap, t_printf *count, char *str)
 }
 
 static	int	ft_cpy_convert(va_list *ap,
-t_printf *count, char const *str, size_t *i)
+	t_printf *count, char const *str, size_t *i)
 {
 	size_t		j;
 
@@ -73,7 +73,8 @@ static	int	ft_conversion(va_list *ap, t_printf *count, char c)
 	(ft_flag[6]) = &ft_string;
 	(ft_flag[7]) = &ft_ptr;
 	count->flag = c;
-	if ((ret = where_is_c(c, INDEX_FLAG)) < 0)
+	ret = where_is_c(c, INDEX_FLAG);
+	if (ret < 0)
 		return (-1);
 	if (ret == 8)
 	{
@@ -111,7 +112,7 @@ static	int	ft_parsing(t_printf *count, va_list *ap, const char *str)
 	return (count->return_value);
 }
 
-int			ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	t_printf	count;
 	va_list		ap;
@@ -121,7 +122,8 @@ int			ft_printf(const char *str, ...)
 	count.return_value = 0;
 	count.flag = 0;
 	va_start(ap, str);
-	if ((ret = ft_parsing(&count, &ap, str)) < 0)
+	ret = ft_parsing(&count, &ap, str);
+	if (ret < 0)
 		return (-1);
 	va_end(ap);
 	return (ret);

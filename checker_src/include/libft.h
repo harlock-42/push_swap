@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DEF_LIBFT_H
-# define DEF_LIBFT_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -59,7 +59,7 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strldup(char *str, size_t size);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strnstr(const char *haystack, const char *needle,
-size_t len);
+					size_t len);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strtrim(const char *s1, const char *set);
@@ -77,10 +77,10 @@ void			*ft_memset(void *s, int c, size_t n);
 ** #####################################
 */
 
-int		get_next_line(int fd, char **line);
-int		ft_strlen_gnl(char *str);
-int		is_to_c(char *str, int c);
-int		ft_error(char **s1, char **s2);
+int				get_next_line(int fd, char **line);
+int				ft_strlen_gnl(char *str);
+int				is_to_c(char *str, int c);
+int				ft_error(char **s1, char **s2);
 
 /*
 ** #####################################

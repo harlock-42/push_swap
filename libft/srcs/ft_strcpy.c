@@ -6,13 +6,13 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/11 14:56:48 by tallaire          #+#    #+#             */
-/*   Updated: 2020/03/11 15:00:36 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 14:40:28 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char		*ft_strcpy(char *dst, char const *src)
+char	*ft_strcpy(char *dst, char const *src)
 {
 	int		i;
 

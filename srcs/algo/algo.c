@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:22:30 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:22:31 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:39:35 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,4 @@ void	algo(t_pile *pile)
 		sort_five(pile);
 	else
 		sortilege(pile);
-//	lst_print(pile->a);
-//	lst_print(pile->b);
-//	sortilege(pile);
 }

@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:27:28 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:29:37 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:28:12 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 static	int	is_median(int nb, t_list *pile)
 {
 	t_list	*tmp;
-	int	minus;
-	int	plus;
-	int	result;
+	int		minus;
+	int		plus;
+	int		result;
 
 	tmp = pile;
 	minus = 0;
@@ -40,7 +40,7 @@ static	int	is_median(int nb, t_list *pile)
 int	find_med(t_list *pile)
 {
 	t_list	*tmp;
-	int	median;
+	int		median;
 
 	tmp = pile;
 	median = 0;

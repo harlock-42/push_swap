@@ -17,8 +17,8 @@ static	int	ft_len_start_width(char *str)
 	int		i;
 
 	i = 0;
-	while (str && str[i] && (str[i] <= '0' || str[i] > '9') && str[i] != '.' &&
-	str[i] != '*')
+	while (str && str[i] && (str[i] <= '0' || str[i] > '9') && str[i] != '.'
+		&& str[i] != '*')
 		++i;
 	return (i);
 }
@@ -86,7 +86,7 @@ static	int	ft_get_precision(va_list *ap, t_printf *count, char *str)
 	return (1);
 }
 
-int			ft_get_convert(va_list *ap, t_printf *count, char *str)
+int	ft_get_convert(va_list *ap, t_printf *count, char *str)
 {
 	count->width_value = 0;
 	count->precision_value = 0;

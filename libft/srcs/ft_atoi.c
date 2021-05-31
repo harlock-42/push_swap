@@ -12,6 +12,13 @@
 
 #include "../includes/libft.h"
 
+static	int	ovf_value(int ovf, long nbr, int sign)
+{
+	if (ovf == 1)
+		return (nbr * sign);
+	return (ovf);
+}
+
 int	ft_atoi(const char *str)
 {
 	long	nbr;
@@ -37,5 +44,5 @@ int	ft_atoi(const char *str)
 		else if (nbr < 0 && sign == -1)
 			ovf = 0;
 	}
-	return (ovf == 1 ? nbr * sign : ovf);
+	return (ovf_value(ovf, nbr, sign));
 }

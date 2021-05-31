@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:25:31 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:25:33 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:33:29 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	do_op(int op, t_pile *pile)
 	(operation[8]) = &reverse_rotate_a;
 	(operation[9]) = &reverse_rotate_b;
 	(operation[10]) = &r_reverse_rotate;
-
 	(*operation[op])(pile);
 	return (1);
 }

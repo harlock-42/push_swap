@@ -25,7 +25,7 @@ static	void	ft_minus(t_printf *count)
 	}
 }
 
-void			ft_modulo(t_printf *count)
+void	ft_modulo(t_printf *count)
 {
 	int	len;
 

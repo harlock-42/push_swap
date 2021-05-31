@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:17:44 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:18:10 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:07:06 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 static	int	is_a_op(char *str)
 {
-	if (ft_strcmp("sa", str) != 0 &&
-	ft_strcmp("sb", str) != 0 &&
-	ft_strcmp("ss", str) != 0 &&
-	ft_strcmp("pa", str) != 0 &&
-	ft_strcmp("pb", str) != 0 &&
-	ft_strcmp("ra", str) != 0 &&
-	ft_strcmp("rb", str) != 0 &&
-	ft_strcmp("rr", str) != 0 &&
-	ft_strcmp("rra", str) != 0 &&
-	ft_strcmp("rrb", str) != 0 &&
-	ft_strcmp("rrr", str) != 0)
+	if (ft_strcmp("sa", str) != 0
+		&& ft_strcmp("sb", str) != 0
+		&& ft_strcmp("ss", str) != 0
+		&& ft_strcmp("pa", str) != 0
+		&& ft_strcmp("pb", str) != 0
+		&& ft_strcmp("ra", str) != 0
+		&& ft_strcmp("rb", str) != 0
+		&& ft_strcmp("rr", str) != 0
+		&& ft_strcmp("rra", str) != 0
+		&& ft_strcmp("rrb", str) != 0
+		&& ft_strcmp("rrr", str) != 0)
 		return (NO);
 	return (YES);
 }

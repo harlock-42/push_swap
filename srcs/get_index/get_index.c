@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:24:28 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/27 18:24:29 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:38:12 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static	int	wich_index(int nb, t_list *pile)
 {
 	t_list	*tmp;
-	int	pos;
+	int		pos;
 
 	tmp = pile;
 	pos = 0;

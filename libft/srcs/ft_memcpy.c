@@ -21,11 +21,11 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned	char	*buffdst;
-	unsigned	char	*buffsrc;
+	unsigned char	*buffdst;
+	unsigned char	*buffsrc;
 
-	buffdst = (unsigned char*)dst;
-	buffsrc = (unsigned char*)src;
+	buffdst = (unsigned char *)dst;
+	buffsrc = (unsigned char *)src;
 	if (dst == src)
 		return (dst);
 	while (n--)
