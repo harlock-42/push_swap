@@ -63,7 +63,7 @@ char			*ft_strnstr(const char *haystack, const char *needle,
 char			*ft_strrchr(const char *s, int c);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strtrim(const char *s1, const char *set);
-char			**ft_split(char *str, char *sep);
+char			**ft_split(char const *str, char c);
 void			*ft_calloc(size_t count, size_t size);
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);

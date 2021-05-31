@@ -56,7 +56,6 @@ SRC		+=	sort_four.c
 SRC		+=	sort_three.c
 SRC		+=	sort_three_case.c
 SRC		+=	sortilege.c
-SRC		+=	sortilege_utils.c
 
 	#############
 	# GET_INDEX #

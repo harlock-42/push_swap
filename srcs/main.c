@@ -30,10 +30,31 @@ static	int	num_is_okey(char *str)
 	return (YES);
 }
 
+static	int	is_num_here(t_list *pile, int nb)
+{
+	t_list	*tmp;
+
+	tmp = pile;
+	if (pile == NULL)
+		return (NO);
+	while (pile)
+	{
+		if (pile->nb == nb)
+		{
+			pile = tmp;
+			return (YES);
+		}
+		pile = pile->next;
+	}
+	pile = tmp;
+	return (NO);
+}
+
 static	t_list	*get_pile_a(char **arg)
 {
 	t_list	*a;
 	int		i;
+	int		nb;
 
 	a = NULL;
 	i = 0;
@@ -41,9 +62,13 @@ static	t_list	*get_pile_a(char **arg)
 	{
 		if (num_is_okey(arg[i]) == NO)
 			return (NULL);
-		a = lst_add_back(NULL, ft_atoi(arg[i]), a);
-		if (!a)
+		nb = ft_atoi(arg[i]);
+		if (is_num_here(a, nb) == YES)
 			return (NULL);
+		if (!(a = lst_add_back(NULL, nb, a)))
+			return (NULL);
+//		if (a == NULL)
+//			return (NULL);
 		++i;
 	}
 	return (a);

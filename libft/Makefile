@@ -103,7 +103,6 @@ SRC_NAME	+=	c_is_alnum.c
 SRC_NAME	+=	c_is_str.c
 SRC_NAME	+=	print_binary.c
 SRC_NAME	+=	where_is_c.c
-SRC_NAME	+=	ft_split_slash.c
 
 
 OBJ_NAME	= $(SRC_NAME:.c=.o)
@@ -134,17 +133,9 @@ $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 
 clean:
 	@$(RM) $(OBJ) $(OBJ_PATH)
-	@echo ""
-	@echo ""
-	@echo "$(C_RED)REMOVE OBJECT FILES$(C_END) [$(C_GREEN)OK$(C_END)]"
-	@echo ""
 
 fclean: clean
-	@echo ""
 	@$(RM) $(NAME)
-	@echo "$(C_RED)REMOVE $(NAME)$(C_END) [$(C_GREEN)OK$(C_END)]"
-	@echo ""
-	@echo ""
 
 re: fclean all
 

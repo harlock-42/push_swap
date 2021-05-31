@@ -60,7 +60,7 @@ char	*ft_do_width_string(t_printf *count, char *str)
 	char	*new;
 
 	new = NULL;
-	len = (int)ft_strlen((const char *)str) >= count->width_value);
+	len = (int)ft_strlen((const char *)str);
 	if (len >= count->width_value)
 		return (str);
 	new = malloc(sizeof(char) * (unsigned long int)count->width_value);

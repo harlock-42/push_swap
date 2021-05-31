@@ -53,5 +53,4 @@ void	sortilege(t_pile *pile)
 		sort_a_bit(pile, pos_bit);
 		++pos_bit;
 	}
-	lst_print(pile->a);
 }

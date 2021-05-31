@@ -62,7 +62,7 @@ static	void	checker(char **arg)
 	if (!pile->a)
 	{
 		free_pile(pile);
-		return (ft_printf("%sError%s\n", RED, NC));
+		return ((void)ft_printf("%sError%s\n", RED, NC));
 	}
 	pile->op = get_op(&check);
 	if (!pile->op && check == 1)
