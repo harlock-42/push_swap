@@ -25,6 +25,8 @@ void	algo(t_pile *pile)
 	int	size;
 
 	size = lst_size(pile->a);
+	if (is_pile_sort(pile->a) == YES && pile->a->nb == find_min(pile->a))
+		return ;
 	if (size == 1 || size == 2)
 		do_one_op(pile);
 	else if (size == 3)

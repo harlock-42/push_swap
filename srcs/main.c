@@ -65,10 +65,9 @@ static	t_list	*get_pile_a(char **arg)
 		nb = ft_atoi(arg[i]);
 		if (is_num_here(a, nb) == YES)
 			return (NULL);
-		if (!(a = lst_add_back(NULL, nb, a)))
+		a = lst_add_back(NULL, nb, a);
+		if (a == NULL)
 			return (NULL);
-//		if (a == NULL)
-//			return (NULL);
 		++i;
 	}
 	return (a);
