@@ -14,7 +14,7 @@
 
 int	do_op(int op, t_pile *pile)
 {
-	void (*operation[11])(t_pile	*pile);
+	void	(*operation[11])(t_pile *pile);
 
 	(operation[0]) = &swap_a;
 	(operation[1]) = &swap_b;
