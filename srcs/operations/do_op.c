@@ -6,7 +6,7 @@
 /*   By: tallaire <tallaire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:25:31 by tallaire          #+#    #+#             */
-/*   Updated: 2021/05/31 15:33:29 by tallaire         ###   ########.fr       */
+/*   Updated: 2021/09/07 11:21:45 by tallaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	do_op(int op, t_pile *pile)
 {
-	void	(*operation[11])(t_pile *pile);
+	void (*operation[11])(t_pile	*pile);
 
 	(operation[0]) = &swap_a;
 	(operation[1]) = &swap_b;
